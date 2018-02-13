@@ -1,5 +1,8 @@
+<div class="container" align="center">
 <h1> New gossip </h1>
-
+<br>
+<p align="left"> <%= link_to('Back to all gossips', gossips_path,class: "btn btn-success") %> </p> 
+<br>
 <%= form_for :gossips do |f| %>
  
 
@@ -7,12 +10,14 @@
     <%= f.label :Your_gossip_here %><br />
     <%= f.text_area :content, autofocus: true %>
   </div>
-
+<br>
   <div class="actions">
     <%= f.submit "Bitchin'" %>
   </div>
+  <br>
 <% end %>
 
-<p> <%= link_to('See all gossips', gossips_path) %> </p> 
+
 
 </div>
+

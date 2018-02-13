@@ -1,6 +1,8 @@
+<div class="container" align="center">
 <h1> Edit my gossip </h1>
+<br>
 
-<<%= form_for :gossips do |f| %>
+<%= form_for :gossips do |f| %>
 
  
 
@@ -13,7 +15,7 @@
 
   </div>
 
-
+<br>
 
   <div class="actions">
 
@@ -24,6 +26,7 @@
 <% end %>
 
 
+<br>
 
-
-<p> <%= link_to('See all gossips', gossips_path) %> </p> 
+<p align="left"> <%= link_to('Back to all gossips', gossips_path,class: "btn btn-success") %> </p> 
+</div>

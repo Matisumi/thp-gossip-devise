@@ -1,8 +1,9 @@
 
-<% if user_signed_in? %>
 
+<div class="container" align="center">
 <h1> Gossip Tab </h1>
-
+<br>
+<p  align="left" > <%= link_to('Write a new gossip', new_gossip_path, class: "btn btn-success") %> </p> 
 <table class="table table-striped">
   <tr>
     <th>Anonymous Author</th>
@@ -30,16 +31,10 @@
   <% end %>
 </table>
 
-<p class = "text-center"> <%= link_to('Write a new gossip', new_gossip_path, class: "btn btn-success") %> </p> 
 
-<p class = "text-center"> <%= link_to 'Log out', destroy_user_session_path, method: :delete, class: "btn btn-warning" %>
+<hr />
 
-<% else %>
+<p class = "text-center"> <%= link_to 'Log out', destroy_user_session_path, method: :delete, class: "btn btn-warning" %></p>
 
-<h1> HEY YOU! </h1>
-<p> Wanna bitch around ? Connect or join us now !</p>
+</div>
 
-<p class = "text-center"> <%= link_to 'Log in', new_user_session_path, class: "btn btn-primary" %> or <%= link_to 'Sign up', new_user_registration_path, class: "btn btn-success" %> 
-</p>
-
-<% end %>
