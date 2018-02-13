@@ -1,0 +1,11 @@
+<h2> <%= @gossips.user.username %> says : </h2>
+<p> <%= @gossips.content %> </p>
+<p> Created: <%= @gossips.created_at.strftime("%d-%m-%Y") %></p>
+
+<% if current_user == @gossips.user %>
+
+	<p> <%= link_to('Edit my gossip', edit_gossip_path) %> </p> 
+
+<% end %>
+
+<p> <%= link_to('See all Gossips', gossips_path) %> </p> 

@@ -1,0 +1,29 @@
+<h1> Edit my gossip </h1>
+
+<<%= form_for :gossips do |f| %>
+
+ 
+
+
+
+  <div class="field">
+
+    <%= f.label :Your_gossip_here %><br />
+    <%= f.text_area :content, autofocus: true %>
+
+  </div>
+
+
+
+  <div class="actions">
+
+    <%= f.submit "Edit my gossip" %>
+
+  </div>
+
+<% end %>
+
+
+
+
+<p> <%= link_to('See all gossips', gossips_path) %> </p> 
